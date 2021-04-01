@@ -31,7 +31,7 @@ const MainScreen = () => {
     const dispatch = useDispatch()
     const history = useSelector(state => state.history)
     const rates = useSelector(state => state.rates)
-    const [currencyClicked, setCurrencyClicked] = useState("he");
+    const [currencyClicked, setCurrencyClicked] = useState(null);
 
 
     const handleCurrencyClicked = (nameData) => {
