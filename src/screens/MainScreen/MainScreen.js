@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const Container = styled.div`
 padding: 50px;
-
 `
 
 const HistoryBox = styled.div`
@@ -33,21 +32,19 @@ const MainScreen = () => {
     const rates = useSelector(state => state.rates)
     const [currencyClicked, setCurrencyClicked] = useState(null);
 
-
-    const handleCurrencyClicked = (nameData) => {
-        setCurrencyClicked(nameData);
-    }
-
     useEffect(() => {
         dispatch(fetchCurrencies());
         dispatch(fetchHistory());
     }, []);
 
+
+    const handleCurrencyClicked = (nameData) => {
+        setCurrencyClicked(nameData);
+    }
+
     return (
         <Container>
             <div>
-
-
                 <CurrencyBox>
                     <h3>Latest EUR rates</h3>
                 </CurrencyBox>
@@ -76,7 +73,6 @@ const MainScreen = () => {
                     )
                 })}
             </div>
-
         </Container >
     )
 }
