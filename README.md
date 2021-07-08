@@ -1,5 +1,5 @@
 # About
 
-Fetching data from Forex API
+Fetching data from Forex REST API
 
 
